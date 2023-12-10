@@ -1,0 +1,63 @@
+.about{
+    display: flex;
+    margin: 80px;
+}
+
+.about-us {
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-us p {
+    color: #f6aa28;
+    margin-bottom: 20px;
+}
+.about-us h5{
+    font-weight: lighter;
+    margin-bottom: 20px;
+
+}
+.about-us h1 {
+    margin-bottom: 20px;
+
+}
+.about-us a {
+    width: 95px;
+    border-bottom: 2px #f6aa28 solid;
+}
+.line {
+    margin: 0px 80px;
+    margin-top: 80px;
+    height: 1px;
+    background-color: #999;
+}
+
+.shopping {
+    margin: 80px;
+
+}
+.shopping-outer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.shopping-title {
+    display: flex;
+    justify-content: space-between;
+}
+.shopping-card {
+    width: fit-content;
+    margin-top: 40px;
+}
+.shopping-card img{
+    width: 387px;
+    height: 387px;
+}
+.card-info{
+    text-align: center;
+    margin: 20px 0px;
+}
+.card-info p {
+    margin: 0;
+}
