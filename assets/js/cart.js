@@ -1,4 +1,6 @@
+// LẤY DỮ LIỆU TỪ LOCALSTORAGE CART
 const listShoes = JSON.parse(localStorage.getItem("cart")) || [];
+// RENDER DỮ LIỆU RA HTML
 function render() {
   const shoes = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -30,19 +32,20 @@ function render() {
     );
   }
 }
-
+// SỬ DỤNG SPLICE ĐỂ XÓA PHẦN TỬ TRONG MẢNG VÀ LƯU VÀO LOCALSTORAGE
 function deleteProduct(index) {
   alert("Are you sure to delete " + listShoes[index].name + "?");
   listShoes.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(listShoes));
   render();
 }
-
+// SỬ DỤNG REMOVEITEM ĐỂ XÓA TẤT CẢ PHẦN TỬ TRONG LOCALSTORAGE
 function deleteAll() {
   alert("Are you sure delete all Shoes?");
   localStorage.removeItem("cart");
   render();
 }
+// SỬ DỤNG REMOVEITEM ĐỂ XÓA TẤT CẢ PHẦN TỬ TRONG LOCALSTORAGE
 
 function buyAll() {
   alert("Buy Successfully!");
