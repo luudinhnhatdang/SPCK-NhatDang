@@ -1,63 +1,307 @@
-.about{
-    display: flex;
-    margin: 80px;
+.nav-item {
+  cursor: pointer;
+}
+.about {
+  display: flex;
+  margin: 80px;
 }
 
 .about-us {
-    padding: 80px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .about-us p {
-    color: #f6aa28;
-    margin-bottom: 20px;
+  color: #f6aa28;
+  margin-bottom: 20px;
 }
-.about-us h5{
-    font-weight: lighter;
-    margin-bottom: 20px;
-
+.about-us h5 {
+  font-weight: lighter;
+  margin-bottom: 20px;
 }
 .about-us h1 {
-    margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 .about-us a {
-    width: 95px;
-    border-bottom: 2px #f6aa28 solid;
+  width: 95px;
+  border-bottom: 2px #f6aa28 solid;
 }
 .line {
-    margin: 0px 80px;
-    margin-top: 80px;
-    height: 1px;
-    background-color: #999;
+  margin: 0px 80px;
+  margin-top: 80px;
+  height: 1px;
+  background-color: #999;
 }
 
 .shopping {
-    margin: 80px;
-
+  margin: 80px;
 }
 .shopping-outer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 .shopping-title {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .shopping-card {
-    width: fit-content;
-    margin-top: 40px;
+  width: fit-content;
+  margin-top: 40px;
 }
-.shopping-card img{
-    width: 387px;
-    height: 387px;
+.shoes-img-container {
+  width: 387px;
+  height: 387px;
+  position: relative;
+  overflow: hidden;
 }
-.card-info{
-    text-align: center;
-    margin: 20px 0px;
+.shopping-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.card-info {
+  text-align: center;
+  margin: 20px 0px;
 }
 .card-info p {
-    margin: 0;
+  margin: 0;
+}
+.shoe-category {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+  gap: 20px;
+}
+.men-category,
+.women-category {
+  width: 650px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.men-category {
+  background-image: url(../images/mencategory.jpeg);
+}
+.women-category {
+  background-image: url(../images/womencategory.jpeg);
+}
+.men-category h1,
+.women-category h1 {
+  margin-bottom: 2rem;
+}
+
+.btn-category {
+  width: 150px;
+  height: 50px;
+  border: 2px #fff solid;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-category:hover {
+  transform: translateY(-3px);
+  border: 2px #fff solid;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+/* .women-category {
+    width: 600px;
+    height: 600px;
+    background-color: red;
+} */
+
+.main-footer {
+  height: 100px;
+  text-align: center;
+  background-color: #f1f1ef;
+  color: #a4a5a6;
+  padding: 40px 0px;
+  font-size: 12px;
+}
+.shoppingmain-outer {
+  min-height: 100vh;
+  background-color: #f1f1ef;
+  padding: 40px 60px;
+}
+
+.shoppingmain-outer .shopping {
+  background-color: #fff;
+  padding: 30px;
+  margin: 0;
+}
+.shoppingmain-outer .shopping .shopping-title h1 {
+  color: #6e7051;
+  font-size: 60px;
+}
+.menwomen-footer {
+  background-color: #6e7051;
+  height: 100px;
+  text-align: center;
+  color: #ccc;
+  padding: 40px 0px;
+  font-size: 12px;
+}
+.btn-search {
+  width: 300px !important;
+  height: 45px !important;
+  align-self: flex-end;
+}
+
+.shopping-card:hover {
+  cursor: pointer;
+}
+.shopping-card:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.shoes-img-container .overlay::before {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.shoes-img-container:hover .overlay::after {
+  content: "View Details";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.overlay {
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(0);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.overlay:hover {
+  color: #fff;
+}
+.hide {
+  display: none;
+}
+
+.shoes-name_info {
+  margin-top: 5px;
+  color: #6e7051;
+  font-family: "Berkshire Swash", serif;
+  font-size: 30px;
+}
+
+.shoes-price_info {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.shoes-price_info span {
+  font-weight: bolder;
+}
+
+.shoes-des_info {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.shoes-des_info span {
+  font-weight: bolder;
+}
+
+.btn-buy {
+  display: inline-block;
+  padding: 8px 20px;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-buy:hover {
+  background: #6e7051;
+  color: #fff;
+  border-radius: 5px;
+}
+#menImg,
+#womenImg,
+#homeImg {
+  width: 387px;
+  height: 387px;
+  border-radius: 5px;
+  margin: 10px;
+  margin-right: 50px;
+}
+#menPrice,
+#menDes,
+#womenPrice,
+#womenDes,
+#homePrice,
+#homeDes {
+  font-weight: 300;
+}
+
+.btnDeleteAll {
+  padding: 15px 20px;
+  background: rgb(247, 161, 161);
+  color: red;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin: 5px;
+  transition: transform 0.5s;
+}
+.btnBuy {
+  padding: 15px 20px;
+  background: rgb(161, 247, 175);
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin: 5px;
+  transition: transform 0.5s;
+}
+.btnBuy:hover,
+.btnDeleteAll:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.btnDelete {
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+.btnDelete:hover {
+  background: rgb(247, 161, 161) !important;
+  color: red !important;
+  border: 1px solid red !important;
+}
+.footer-outer {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
