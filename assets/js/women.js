@@ -48,8 +48,8 @@ const womenOuter = document.getElementById("womenOuter");
 // HÀM RENDERMEN ĐỂ THÊM TỪNG THẺ DIV VÀO THẺ WOMENOUTER BẰNG CÁCH DUYỆT DATA WOMEN TRONG VÒNG FOR
 function renderWomen() {
   womenOuter.innerHTML = null;
-  for (i of dataWonen) {
-    menOuter.insertAdjacentHTML(
+  for (i of dataWomen) {
+    womenOuter.insertAdjacentHTML(
       "beforeend",
       `
           <div data-aos="fade-up" class="shopping-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -72,7 +72,7 @@ function renderWomen() {
           `
     );
   }
-  searchnWomen();
+  searchWomen();
   clickWomenShoes();
 }
 
@@ -93,14 +93,14 @@ function searchWomen() {
 }
 
 // HÀM CLICKMENSHOES ĐỂ HIỂN THỊ THÔNG TIN GIÀY KHI CLICK VÀO GIÀY
-function clickMenShoes() {
+function clickWomenShoes() {
   const listWomenShoes = document.querySelectorAll(".shopping-card");
   listWomenShoes.forEach((item, index) => {
     item.addEventListener("click", () => {
       document.getElementById("womenImg").src = dataWomen[index].image;
       document.getElementById("womenName").innerHTML = dataWomen[index].name;
       document.getElementById("womenPrice").innerHTML =
-        dataMen[index].price + "$";
+        dataWomen[index].price + "$";
       document.getElementById("womenDes").innerHTML = dataWomen[index].des;
       document.getElementById("btnAdd").onclick = () => {
         addToCart(index);
